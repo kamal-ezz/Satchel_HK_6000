@@ -1,5 +1,6 @@
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
+using Encryption = TeamCherry.SharedUtils.Encryption;
 using System.Text;
 using Modding.Patches;
 using Newtonsoft.Json;

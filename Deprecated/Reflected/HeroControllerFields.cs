@@ -2090,42 +2090,6 @@
             set => HeroController.instance.fsm_orbitShield = value;
         }
 
-        public static VibrationData softLandVibration
-        {
-            get => HeroController.instance.softLandVibration;
-            set => HeroController.instance.softLandVibration = value;
-        }
-
-        public static VibrationData wallJumpVibration
-        {
-            get => HeroController.instance.wallJumpVibration;
-            set => HeroController.instance.wallJumpVibration = value;
-        }
-
-        public static VibrationPlayer wallSlideVibrationPlayer
-        {
-            get => HeroController.instance.wallSlideVibrationPlayer;
-            set => HeroController.instance.wallSlideVibrationPlayer = value;
-        }
-
-        public static VibrationData dashVibration
-        {
-            get => HeroController.instance.dashVibration;
-            set => HeroController.instance.dashVibration = value;
-        }
-
-        public static VibrationData shadowDashVibration
-        {
-            get => HeroController.instance.shadowDashVibration;
-            set => HeroController.instance.shadowDashVibration = value;
-        }
-
-        public static VibrationData doubleJumpVibration
-        {
-            get => HeroController.instance.doubleJumpVibration;
-            set => HeroController.instance.doubleJumpVibration = value;
-        }
-
         public static bool jumpReleaseQueueingEnabled
         {
             get => ReflectionHelper.GetField<HeroController, bool>(HeroController.instance,

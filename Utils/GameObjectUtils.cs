@@ -162,7 +162,7 @@ namespace Satchel
         /// </summary>
         public static void PrintAllActiveGameObjectsInScene()
         {
-            foreach (GameObject gameObject in GameObject.FindObjectsOfType<GameObject>())
+            foreach (GameObject gameObject in GameObject.FindObjectsByType<GameObject>(FindObjectsSortMode.None))
             {
                 gameObject.Log();
             }

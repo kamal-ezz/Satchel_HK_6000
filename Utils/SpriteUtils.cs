@@ -42,7 +42,7 @@ namespace Satchel
                 for (int y = 0; y < triangle.Length; y++)
                     outTex.SetPixel(x, y, triangle[y][x] ? Color.white : Color.black);
             outTex.Apply();
-            TextureUtils.WriteTextureToFile(outTex, $"{AssemblyUtils.getCurrentDirectory()}/{spriteName}-{num}.png");
+            TextureUtils.WriteTextureToFile(outTex, $"{AssemblyUtils.GetCurrentDirectory()}/{spriteName}-{num}.png");
             Texture2D.DestroyImmediate(outTex);
         }
 

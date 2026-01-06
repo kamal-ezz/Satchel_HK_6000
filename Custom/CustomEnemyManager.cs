@@ -46,7 +46,7 @@ namespace Satchel
         private void OnSceneChanged(Scene from, Scene to)
         {
             customEnemies = new List<GameObject>();
-            foreach (CustomEnemyMarker enemy in GameObject.FindObjectsOfType<CustomEnemyMarker>())
+            foreach (CustomEnemyMarker enemy in GameObject.FindObjectsByType<CustomEnemyMarker>(FindObjectsSortMode.None))
             {
                 if (enemy == null && enemy.gameObject == null) { continue; }
                 // process an enemy only once

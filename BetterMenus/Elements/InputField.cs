@@ -74,7 +74,7 @@ public class InputField : Element
                 inputField.onValueChanged = onChangeEvent;
                 break;
             case InputFieldSaveType.EditEnd:
-                var submitEvent = new UnityEngine.UI.InputField.SubmitEvent();
+                var submitEvent = new UnityEngine.UI.InputField.EndEditEvent();
                 submitEvent.AddListener(storeValue.Invoke);
                 inputField.onEndEdit = submitEvent;
                 break;

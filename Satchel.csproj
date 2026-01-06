@@ -59,11 +59,14 @@
     <Reference Include="MonoMod.Utils, Version=21.4.29.1, Culture=neutral, PublicKeyToken=null">
       <HintPath>$(ModdingAPI)\MonoMod.Utils.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>$(ModdingAPI)\Newtonsoft.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine">
+	 <Reference Include="UnityEngine">
       <HintPath>$(VanillaFiles)\UnityEngine.dll</HintPath>
+    </Reference>
+	<Reference Include="mscorlib">
+      <HintPath>$(VanillaFiles)\mscorlib.dll</HintPath>
+    </Reference>
+    <Reference Include="netstandard">
+      <HintPath>$(VanillaFiles)\netstandard.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.CoreModule">
       <HintPath>$(VanillaFiles)\UnityEngine.CoreModule.dll</HintPath>
@@ -85,6 +88,15 @@
     </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>$(VanillaFiles)\UnityEngine.UI.dll</HintPath>
+    </Reference>
+	<Reference Include="TeamCherry.TK2D">
+      <HintPath>$(VanillaFiles)\TeamCherry.TK2D.dll</HintPath>
+    </Reference>
+	<Reference Include="TeamCherry.SharedUtils">
+      <HintPath>$(VanillaFiles)\TeamCherry.SharedUtils.dll</HintPath>
+    </Reference>
+	<Reference Include="Newtonsoft.Json">
+      <HintPath>$(VanillaFiles)\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.JSONSerializeModule">
       <HintPath>$(VanillaFiles)\UnityEngine.JSONSerializeModule.dll</HintPath>

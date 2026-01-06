@@ -101,7 +101,7 @@ namespace Satchel
                 self.tilemap.height = (int)height;
                 self.sceneWidth = width;
                 self.sceneHeight = height;
-                var map = UnityEngine.Object.FindObjectOfType<GameMap>();
+                var map = UnityEngine.Object.FindFirstObjectByType<GameMap>();
                 if (map != null)
                 {
                     map.SetManualTilemap(0, 0, width, height);

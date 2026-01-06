@@ -116,7 +116,7 @@ namespace Satchel
         {
             var speed = distance / time;
             var velocity = direction.normalized * speed;
-            rb.velocity = velocity;
+            rb.linearVelocity = velocity;
             return new WaitForSeconds(time);
         }
 
