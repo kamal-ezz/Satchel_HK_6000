@@ -589,23 +589,11 @@
         public static void orig_OnApplicationQuit() =>
             ReflectionHelper.CallMethod<GameManager>(GameManager.instance, "orig_OnApplicationQuit");
 
-        public static void orig_LoadScene(string destScene) =>
-            GameManager.instance.orig_LoadScene(destScene);
-
         public static void orig_BeginSceneTransition(GameManager.SceneLoadInfo info) =>
             GameManager.instance.orig_BeginSceneTransition(info);
 
-        public static void orig_ClearSaveFile(int saveSlot, System.Action<bool> callback) =>
-            GameManager.instance.orig_ClearSaveFile(saveSlot, callback);
-
-        public static System.Collections.IEnumerator orig_PlayerDead(float waitTime) =>
-            GameManager.instance.orig_PlayerDead(waitTime);
-
         public static void orig_SetupSceneRefs(bool refreshTilemapInfo) =>
             GameManager.instance.orig_SetupSceneRefs(refreshTilemapInfo);
-
-        public static void orig_OnWillActivateFirstLevel() =>
-            GameManager.instance.orig_OnWillActivateFirstLevel();
 
         public static System.Collections.IEnumerator PauseToggleDynamicMenu(MenuScreen screen,
             bool allowUnpause = false) =>

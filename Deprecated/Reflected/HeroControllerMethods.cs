@@ -36,7 +36,7 @@
             ReflectionHelper.CallMethod<HeroController>(HeroController.instance, "DoubleJump");
 
         public static void Attack(GlobalEnums.AttackDirection attackDir) =>
-            HeroController.instance.Attack(attackDir);
+            ReflectionHelper.CallMethod<HeroController>(HeroController.instance, "Attack", attackDir);
 
         public static void Dash() =>
             ReflectionHelper.CallMethod<HeroController>(HeroController.instance, "Dash");
@@ -656,9 +656,6 @@
         public static float FindGroundPointY(float x, float y, bool useExtended = false) =>
             ReflectionHelper.CallMethod<HeroController, float>(HeroController.instance, "FindGroundPointY", x, y,
                 useExtended);
-
-        public static void orig_StartMPDrain(float time) =>
-            HeroController.instance.orig_StartMPDrain(time);
 
         public static void orig_Update() =>
             ReflectionHelper.CallMethod<HeroController>(HeroController.instance, "orig_Update");
