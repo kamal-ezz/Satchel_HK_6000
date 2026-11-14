@@ -157,16 +157,16 @@ public class InputField : Element
                 inputFieldObj.RemoveComponent<Image>();
                 inputFieldObj.transform.localPosition = new Vector3(375f, 0f); //to be set on build
 
-                var field = inputFieldObj.GetComponent<UnityEngine.UI.InputField>();
-                field.textComponent.font = MenuResources.TrajanRegular;
-                field.textComponent.color = Color.white;
-                field.textComponent.alignment = TextAnchor.MiddleCenter;
+                var inputField = inputFieldObj.GetComponent<UnityEngine.UI.InputField>();
+                inputField.textComponent.font = MenuResources.TrajanRegular;
+                inputField.textComponent.color = Color.white;
+                inputField.textComponent.alignment = TextAnchor.MiddleCenter;
 
                 //to be set on build
-                field.textComponent.text = "";
-                field.textComponent.fontSize = 46;
-                field.contentType = UnityEngine.UI.InputField.ContentType.Standard;
-                field.characterLimit = 10;
+                inputField.textComponent.text = "";
+                inputField.textComponent.fontSize = 46;
+                inputField.contentType = UnityEngine.UI.InputField.ContentType.Standard;
+                inputField.characterLimit = 10;
 
                 var placeHolder = inputFieldObj.Find("Placeholder").GetComponent<Text>();
                 placeHolder.font = MenuResources.TrajanRegular;
