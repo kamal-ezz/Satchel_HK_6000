@@ -14,7 +14,7 @@ namespace Satchel
             if (Sr != null)
             {
                 Shader shader = null;
-                if (enableFlash)
+                if (enableFlash && Core.spriteFlash != null)
                 {
                     shader = Core.spriteFlash;
                 }

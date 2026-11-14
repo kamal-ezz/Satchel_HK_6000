@@ -33,14 +33,35 @@ namespace Satchel
                     spriteExtractBundle = AssemblyUtils.GetAssetBundleFromResources("win.spriteextract");
                     break;
             }
+            // The embedded bundles were built with Unity 2020; if the running Unity version or
+            // graphics API can't load them, leave the shaders null instead of throwing from the
+            // static constructor, which would make every Core member unusable.
             if (spriteFlash == null)
             {
-                spriteFlash = shaderBundle.GetShader("spriteflash.shader");
+                if (shaderBundle != null)
+                {
+                    spriteFlash = shaderBundle.GetShader("spriteflash.shader");
+                }
+                WarnIfUnusable(spriteFlash, "spriteflash.shader");
             }
             if (spriteExtractBundle != null)
             {
                 spriteExtract = spriteExtractBundle.GetShader("SpriteExtract");
                 spriteMask = spriteExtractBundle.GetShader("SpriteMaskMaker");
+            }
+            WarnIfUnusable(spriteExtract, "SpriteExtract");
+            WarnIfUnusable(spriteMask, "SpriteMaskMaker");
+        }
+
+        private static void WarnIfUnusable(Shader shader, string name)
+        {
+            if (shader == null)
+            {
+                Modding.Logger.LogWarn($"[Satchel] Could not load shader '{name}' on {SystemInfo.operatingSystemFamily}; features that depend on it are disabled.");
+            }
+            else if (!shader.isSupported)
+            {
+                Modding.Logger.LogWarn($"[Satchel] Shader '{name}' is not supported by the current graphics API ({SystemInfo.graphicsDeviceType}).");
             }
         }
         static Core()
